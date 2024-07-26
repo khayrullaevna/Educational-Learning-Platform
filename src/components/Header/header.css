@@ -1,0 +1,118 @@
+.header {
+  background: url('../../assets/img/learn.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.header-content:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: var(--clr-secondary); 
+}
+
+p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cta-button {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button.primary {
+  background-color: var(--clr-secondary);
+  color: #fff;
+}
+
+.cta-button.primary:hover {
+  background-color: var(--clr-secondary-hover);
+}
+
+.cta-button.secondary {
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid var(--clr-secondary);
+}
+
+.cta-button.secondary:hover {
+  background-color: #f4f4f4;
+  color: var(--clr-secondary);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

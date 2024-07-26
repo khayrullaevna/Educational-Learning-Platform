@@ -1,0 +1,250 @@
+/* Navbar Container */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.15) 0px 16px 12px -2px,
+    rgba(0, 0, 0, 0.2) 0px 3px 7px -3px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+.navbar:hover {
+  background-color: #f8f8f8;
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 20px 15px -2px,
+    rgba(0, 0, 0, 0.3) 0px 5px 10px -3px;
+}
+
+/* Container for Navbar Content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Brand and Toggler Section */
+.brand-and-toggler {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Brand Link */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  margin-right: auto; /* Align brand to the left */
+}
+
+.navbar-brand span {
+  color: var(--clr-secondary);
+}
+
+.navbar-brand:hover {
+  color: var(--clr-secondary);
+}
+
+/* Search Container */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  margin: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Header Search Input and Button */
+.headerSearch {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 80%;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headerSearch:focus {
+  border-color: var(--clr-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.headerSearchButton {
+  background-color: var(--clr-secondary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.headerSearchButton:hover {
+  background-color: var(--clr-secondary-hover);
+  transform: scale(1.05);
+}
+
+.navbar-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.cart-btn,
+.like-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-btn:hover,
+.like-btn:hover {
+  color: var(--clr-secondary);
+  transform: scale(1.1);
+}
+
+.item-count-badge {
+  background-color: var(--clr-secondary);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Sidebar Open Button */
+.sidebar-open-btn {
+  background: none;
+  border: none;
+  font-size: 23px;
+  color: #333;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-open-btn:hover {
+  opacity: 0.7;
+  transform: rotate(90deg);
+}
+
+/* Login Button */
+.navbar-login {
+  display: inline-block;
+  background-color: var(--clr-secondary);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-login:hover {
+  background-color: var(--clr-secondary-hover);
+  transform: scale(1.05);
+}
+
+.navbar-login:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .searchContainer {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-btns {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .headerSearch,
+  .headerSearchButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .headerSearch,
+  .headerSearchButton {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .headerSearch,
+  .headerSearchButton {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .cart-btn,
+  .like-btn {
+    font-size: 20px;
+  }
+
+  .navbar-btns {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center align buttons */
+  }
+}

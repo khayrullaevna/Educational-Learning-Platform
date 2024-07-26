@@ -1,0 +1,21 @@
+// export const PYTHON = "python";
+// export const WEB_DEVELOPMENT = "web development";
+// export const DATA_SCIENCE = "data science";
+// export const AWS = "aws";
+// export const DESIGN = "design";
+// export const MARKETING = "marketing";
+export const ALL = "all";
+export const BUSINESS = "business";
+export const CREATIVITY = "creativity";
+export const LANGUAGE = "language";
+export const LAW = "law";
+export const PSYCHOLOGY = "psychology";
+export const ART = "art";
+export const SCIENCE = "science";
+export const TECHNOLOGY = "technology";
+export const MATHEMATICS = "mathematics";
+
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
+export const CLEAR_CART = 'CLEAR_CART';
+export const GET_CART_TOTAL = 'GET_CART_TOTAL';

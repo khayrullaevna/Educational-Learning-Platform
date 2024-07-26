@@ -1,0 +1,50 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
+.homeSlider {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.slick-list {
+  overflow-x: auto;
+  
+}
+
+.slick-list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.slider-img {
+  width: 97%;
+}
+
+.slick-slide {
+  position: relative;
+
+  transform: translateX(-8%); /* Adjust this value to show part of the next slide */
+}
+
+.custom-arrow {
+  color: black;
+  font-size: 15px;
+  right: 100px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  z-index: 1;
+  cursor: pointer;
+}
+

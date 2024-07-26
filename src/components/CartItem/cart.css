@@ -1,0 +1,83 @@
+.cart-item-wrapper {
+  display: grid;
+  grid-template-columns: 110px auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cart-item-wrapper:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item-img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.cart-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-item-img img:hover {
+  transform: scale(1.05);
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.text-purple {
+  color: #6f42c1; /* Example purple color */
+}
+
+.bg-orange {
+  background-color: #fd7e14; /* Example orange color */
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.opacity-09 {
+  opacity: 0.9;
+}
+
+.cart-item-category {
+  padding: 0 10px;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.remove-btn:hover {
+  color: #6f42c1; /* Example purple color */
+}

@@ -1,0 +1,33 @@
+.category-based-list {
+  margin-top: 32px;
+  display: grid;
+  gap: 26px;
+  transition: all 300ms ease-in-out;
+}
+
+@media screen and (min-width: 600px) {
+  .category-based-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .category-based-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .category-based-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.course-item {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.course-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

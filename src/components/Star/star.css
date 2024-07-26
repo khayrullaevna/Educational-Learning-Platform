@@ -1,0 +1,19 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #e59819;
+  margin-right: 2px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.star:hover {
+  color: #d4a017;
+}
+
+.star:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,71 @@
+.tabs {
+    margin-top: 16px;
+  }
+  
+  .tabs-header {
+    margin-bottom: 16px;
+  }
+  
+  .tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tabs-item {
+    margin-right: 6px;
+  }
+  
+  .tabs-item button {
+    border: 1px solid var(--clr-secondary);
+    padding: 10px 13px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: var(--clr-secondary);
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tabs-item button:hover,
+  .tabs-item.active button {
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+  }
+  
+  .tabs-body {
+    margin-top: 32px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tabs-body > div {
+    transition: opacity 0.3s ease;
+  }
+  
+  .tabs-body > div.show {
+    opacity: 1;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .tabs-body {
+      display: grid;
+      gap: 26px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .tabs-body {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    .tabs-body {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

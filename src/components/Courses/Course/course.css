@@ -1,0 +1,139 @@
+.course-card {
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
+}
+
+.item-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.fav-icon {
+  font-size: 24px;
+  color: white;
+  transform: translate(900%, -550%);
+}
+
+.fav-icon:hover {
+  color: #e74c3c;
+}
+
+.item-body {
+  padding: 16px;
+}
+
+.item-name {
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only two lines */
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.item-creator {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.item-rating {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.rating-star-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b4690e;
+  margin-right: 6px;
+}
+
+.rating-count {
+  font-size: 14px;
+  margin-left: 6px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.item-price {
+  margin-top: 8px;
+}
+
+.item-price-new {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.item-price-old {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.item-btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.item-btn {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.see-details-btn {
+  background-color: transparent;
+  border: 1px solid var(--clr-secondary);
+  color: var(--clr-secondary);
+}
+
+.see-details-btn:hover {
+  background-color: var(--clr-secondary);
+  color: #fff;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: var(--clr-secondary);
+  color: #fff;
+  border: 1px solid var(--clr-secondary);
+}
+
+.add-to-cart-btn:hover {
+  background-color: transparent;
+  color: var(--clr-secondary);
+}
+.course-cart-icon {
+  font-size: 16px;
+  margin-right: 5px;
+}

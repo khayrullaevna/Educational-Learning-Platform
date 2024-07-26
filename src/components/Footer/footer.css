@@ -1,0 +1,150 @@
+.footer {
+  background-color: #101010;
+  color: #fff;
+  padding: 40px 20px;
+  box-shadow: rgba(50, 50, 93, 0.15) 0px -16px 12px -2px,
+    rgba(0, 0, 0, 0.2) 0px -3px 7px -3px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-brand {
+  margin-bottom: 30px;
+}
+
+.footer-brand-link {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-brand-link span {
+  color: var(--clr-secondary);
+}
+
+.footer-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.footer-links-box {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+.footer-links {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--clr-secondary);
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-link:hover {
+  color: var(--clr-secondary);
+}
+
+.footer-icon {
+  margin-right: 10px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .footer-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-brand-link {
+    font-size: 28px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  .social-link {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-brand-link {
+    font-size: 24px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+
+  .social-link {
+    font-size: 18px;
+  }
+
+  .footer-contact {
+    gap: 8px;
+  }
+
+  .footer-contact p {
+    font-size: 14px;
+  }
+}

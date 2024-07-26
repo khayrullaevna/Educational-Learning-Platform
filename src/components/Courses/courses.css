@@ -1,0 +1,40 @@
+.courses-list-wrapper {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.containerr {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.courses-list-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.courses-list-top h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.courses-list-top h2:hover {
+  color: #6c5b7b;
+}
+
+.courses-list-top p {
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.courses-list-top p:hover {
+  color: #333;
+}
