@@ -1,19 +1,21 @@
+/* star.css */
+
 .star-rating {
   display: flex;
-  align-items: center;
+  cursor: pointer;
 }
 
 .star {
-  color: #e59819;
-  margin-right: 2px;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  color: #e0e0e0; /* Light grey for unfilled stars */
+  transition: color 0.2s ease;
 }
 
-.star:hover {
-  color: #d4a017;
+.star:hover,
+.star-rating .star:hover ~ .star {
+  color: #ffc107; /* Gold color on hover */
 }
 
-.star:last-child {
-  margin-right: 0;
+.star-rating .star {
+  color: #ffc107; /* Gold color for filled stars */
 }

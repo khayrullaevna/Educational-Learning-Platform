@@ -14,6 +14,19 @@
   box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
 }
 
+.course-card > svg:hover {
+  color: red;
+}
+
+.course-card > svg:active {
+  color: red;
+  fill: red;
+}
+
+.fav-icon:active{
+  color: red;
+}
+
 .item-img img {
   width: 100%;
   height: auto;

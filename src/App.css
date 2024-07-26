@@ -7,12 +7,11 @@
     --clr-secondary-hover: #58297fe1;
     --clr-gray-light: #f5f5f5;
     --clr-gray-dark: #333333;
-    --clr-accent: #007bff; /* A subtle blue for accents */
+    --clr-accent: #007bff; 
     --spacing: 0.1rem;
     --transition: all 300ms ease;
 }
 
-/* global styles and resets */
 *,
 *::after,
 *::before {
@@ -116,7 +115,6 @@ input, textarea, select {
     display: grid;
 }
 
-/* display */
 .d-block {
     display: block;
 }
@@ -127,67 +125,55 @@ input, textarea, select {
     display: inline;
 }
 
-/* height and width */
 .h-100 { height: 100%; }
 .w-100 { width: 100%; }
 
-/* backgrounds */
 .bg-white { background-color: var(--clr-white); }
 .bg-gray-light { background-color: var(--clr-gray-light); }
 .bg-gray-dark { background-color: var(--clr-gray-dark); }
 
-/* text and paras */
 .text {
     line-height: 1.6;
     font-weight: 400;
-    font-size: 1.8rem; /* Use relative units */
+    font-size: 1.8rem; 
 }
 
-/* text alignment */
 .text-center { text-align: center; }
 .text-start { text-align: left; }
 .text-end { text-align: right; }
 
-/* text transform */
 .text-uppercase { text-transform: uppercase; }
 .text-capitalize { text-transform: capitalize; }
 .text-justify { text-align: justify; }
 
-/* text colors */
 .text-white { color: var(--clr-white); }
 .text-black { color: var(--clr-black); }
 .text-accent { color: var(--clr-accent); }
 .text-gray-dark { color: var(--clr-gray-dark); }
 
-/* font weights */
 .fw-400 { font-weight: 400; }
 .fw-500 { font-weight: 500; }
 .fw-700 { font-weight: 700; }
 
-/* font sizes */
 .fs-12 { font-size: 1.2rem; }
 .fs-14 { font-size: 1.4rem; }
 .fs-16 { font-size: 1.6rem; }
 .fs-18 { font-size: 1.8rem; }
 .fs-20 { font-size: 2rem; }
 
-/* letter spacing */
 .ls-1 { letter-spacing: 0.1rem; }
 
-/* margin & padding */
 .mx-auto {
     margin-right: auto;
     margin-left: auto;
 }
 
-/* opacity */
 .opacity-09 { opacity: 0.9; }
 .opacity-08 { opacity: 0.8; }
 .opacity-07 { opacity: 0.7; }
 .opacity-06 { opacity: 0.6; }
 .opacity-05 { opacity: 0.5; }
 
-/* animation and transition stopper */
 .resize-animation-stopper * {
     animation: none !important;
     transition: none !important;

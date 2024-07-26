@@ -1,18 +1,21 @@
-import "./navbar.css";
-import { MdMenu, MdShoppingCart, MdFavorite as MdFavoriteOutlined } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
-import { useCartContext } from "../../context/cart_context";
-import { FaCartShopping } from "react-icons/fa6";
-import { useState } from "react";
-import { courses } from "../../utils/data";
-import { useFavoriteContext } from "../../context/favorite_context";
-import { MdFavorite as MdFavoriteFilled } from "react-icons/md";
+import React, { useState } from 'react';
+import './navbar.css';
+import { MdMenu, MdShoppingCart, MdFavorite as MdFavoriteOutlined } from 'react-icons/md';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCartContext } from '../../context/cart_context';
+import { FaCartShopping } from 'react-icons/fa6';
+import { MdFavorite as MdFavoriteFilled } from 'react-icons/md';
+import { useFavorites } from '../../context/favorite_context';
+
 
 const Navbar = () => {
   const { total_items } = useCartContext();
-  const { favorites, addFavorite, removeFavorite } = useFavoriteContext();
-  const [input, setInput] = useState("");
+  const { state, addFavorite, removeFavorite } = useFavorites();
+  const [input, setInput] = useState('');
   const navigate = useNavigate();
+
+  // Ensure `favoriteCourses` is defined and an array
+  const favorites = state?.favoriteCourses || [];
 
   const handleChange = (value) => {
     setInput(value);

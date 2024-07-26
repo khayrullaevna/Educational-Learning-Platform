@@ -1,9 +1,11 @@
+import React, { useState } from "react";
 import "./course.css";
 import { Link, useNavigate } from "react-router-dom";
-import Star from "../../Star/Star";
-import { useCartContext } from "../../../context/cart_context";
+import { useFavorites } from "../../../context/favorite_context";
 import { BsFillCartPlusFill } from "react-icons/bs";
-import { MdFavorite } from "react-icons/md";
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
+import StarRating from "../../Star/Star";
+import { useCartContext } from "../../../context/cart_context";
 
 const Course = (props) => {
   const {
@@ -18,24 +20,52 @@ const Course = (props) => {
     category,
   } = props;
   const { addToCart } = useCartContext();
+  const { state, addFavorite, removeFavorite } = useFavorites();
+  const isFavorite = state.favoriteCourses.some(course => course.id === id);
 
   const navigate = useNavigate();
 
   function AddDetailCard() {
     navigate(`/courses/${id}`);
   }
+
+  const handleFavoriteClick = () => {
+    const course = { id, image, course_name, creator, discounted_price, category };
+    if (isFavorite) {
+      removeFavorite(id);
+    } else {
+      addFavorite(course);
+    }
+  };
+
   return (
-    <div className="course-card" >
-      <div className="item-img" onClick={AddDetailCard}>
-        <img src={image} alt={course_name} />
+    <div className="course-card">
+      <div className="item-img">
+        <img src={image} alt={course_name} onClick={AddDetailCard} />
       </div>
-      <MdFavorite className="fav-icon" />
-      <div className="item-body" onClick={AddDetailCard}>
-        <h5 className="item-name">{course_name}</h5>
-        <span className="item-creator">{creator}</span>
+      {isFavorite ? (
+        <MdFavorite
+          className="fav-icon favorited"
+          onClick={handleFavoriteClick}
+        />
+      ) : (
+        <MdFavoriteBorder
+          className="fav-icon"
+          onClick={handleFavoriteClick}
+        />
+      )}
+
+      <div className="item-body">
+        <h5 className="item-name" onClick={AddDetailCard}>
+          {course_name}
+        </h5>
+        <span className="item-creator" onClick={AddDetailCard}>
+          {creator}
+        </span>
         <div className="item-rating">
-          <span className="rating-star-val">{rating_star}</span>
-          <Star rating_star={rating_star} />
+          <span className="rating-star-val">
+            <StarRating />{" "}
+          </span>
           <span className="rating-count">({rating_count})</span>
         </div>
         <div className="item-price">
@@ -45,7 +75,6 @@ const Course = (props) => {
       </div>
       <div className="item-btns">
         <div
-          
           className="item-btn add-to-cart-btn"
           onClick={() =>
             addToCart(
@@ -58,10 +87,8 @@ const Course = (props) => {
             )
           }
         >
-          <BsFillCartPlusFill className="course-cart-icon"/>   Add to cart
+          <BsFillCartPlusFill className="course-cart-icon" /> Add to cart
         </div>
-
-        
       </div>
     </div>
   );
